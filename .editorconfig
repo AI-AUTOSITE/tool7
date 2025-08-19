@@ -1,0 +1,100 @@
+# EditorConfig helps maintain consistent coding styles
+# across different editors and IDEs
+# https://editorconfig.org
+
+# トップレベルの設定ファイル
+root = true
+
+# =====================================
+# すべてのファイルのデフォルト設定
+# =====================================
+[*]
+# 文字コード
+charset = utf-8
+# 改行コード（LF統一）
+end_of_line = lf
+# ファイル末尾に改行を入れる
+insert_final_newline = true
+# 行末の空白を削除
+trim_trailing_whitespace = true
+# インデントスタイル
+indent_style = space
+# インデントサイズ
+indent_size = 2
+
+# =====================================
+# 言語別の設定
+# =====================================
+
+# JavaScript/TypeScript
+[*.{js,jsx,ts,tsx}]
+indent_size = 2
+max_line_length = 100
+
+# JSON
+[*.json]
+indent_size = 2
+
+# CSS/SCSS
+[*.{css,scss,sass,less}]
+indent_size = 2
+
+# HTML
+[*.{html,htm}]
+indent_size = 2
+
+# YAML
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown
+[*.md]
+# Markdownでは行末スペースが意味を持つ場合がある
+trim_trailing_whitespace = false
+max_line_length = off
+
+# Python（もし使う場合）
+[*.py]
+indent_size = 4
+max_line_length = 79
+
+# Makefile
+[Makefile]
+# Makefileはタブが必須
+indent_style = tab
+
+# Windowsバッチファイル
+[*.{bat,cmd}]
+end_of_line = crlf
+
+# =====================================
+# 設定ファイル
+# =====================================
+
+# package.json
+[package.json]
+indent_size = 2
+
+# .gitignore, .gitattributes
+[.git*]
+indent_size = 2
+
+# Docker
+[Dockerfile]
+indent_size = 2
+
+[docker-compose.yml]
+indent_size = 2
+
+# =====================================
+# Next.js/Vercel固有
+# =====================================
+
+[.vercelignore]
+indent_size = 2
+
+[next.config.{js,mjs}]
+indent_size = 2
+
+[*.config.{js,ts}]
+indent_size = 2

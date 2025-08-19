@@ -1,0 +1,138 @@
+# =====================================
+# 改行コードの自動変換設定
+# =====================================
+
+# デフォルト設定（すべてのテキストファイルをLFに統一）
+* text=auto eol=lf
+
+# =====================================
+# 特定ファイルの設定
+# =====================================
+
+# ソースコード（必ずLF）
+*.js text eol=lf
+*.jsx text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.css text eol=lf
+*.scss text eol=lf
+*.sass text eol=lf
+*.less text eol=lf
+*.html text eol=lf
+*.xml text eol=lf
+*.svg text eol=lf
+
+# 設定ファイル（必ずLF）
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf
+.eslintrc text eol=lf
+.prettierrc text eol=lf
+*.config.js text eol=lf
+*.config.ts text eol=lf
+
+# シェルスクリプト（必ずLF）
+*.sh text eol=lf
+*.bash text eol=lf
+*.zsh text eol=lf
+
+# Windowsバッチファイル（CRLF維持）
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# =====================================
+# バイナリファイル（改行変換しない）
+# =====================================
+
+# 画像
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+
+# フォント
+*.ttf binary
+*.otf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+
+# 動画・音声
+*.mp4 binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.webm binary
+
+# ドキュメント
+*.pdf binary
+*.doc binary
+*.docx binary
+*.xls binary
+*.xlsx binary
+*.ppt binary
+*.pptx binary
+
+# アーカイブ
+*.zip binary
+*.tar binary
+*.gz binary
+*.7z binary
+*.rar binary
+
+# その他
+*.exe binary
+*.dll binary
+*.so binary
+*.dylib binary
+
+# =====================================
+# Git LFS設定（大きなファイル用）
+# =====================================
+
+# 大きな画像ファイル
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.ai filter=lfs diff=lfs merge=lfs -text
+*.sketch filter=lfs diff=lfs merge=lfs -text
+*.fig filter=lfs diff=lfs merge=lfs -text
+
+# 大きなメディアファイル
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.mkv filter=lfs diff=lfs merge=lfs -text
+
+# =====================================
+# 言語検出（GitHubの言語統計用）
+# =====================================
+
+# vendorファイルを言語統計から除外
+node_modules/* linguist-vendored
+.next/* linguist-vendored
+public/vendor/* linguist-vendored
+
+# ドキュメントを言語統計から除外
+*.md linguist-documentation
+docs/* linguist-documentation
+
+# 生成ファイルを除外
+*.generated.* linguist-generated
+*-lock.json linguist-generated
+
+# =====================================
+# マージ戦略
+# =====================================
+
+# package-lock.jsonのマージ競合を減らす
+package-lock.json merge=ours
+
+# 環境変数ファイルはマージしない
+.env merge=ours
+.env.* merge=ours
