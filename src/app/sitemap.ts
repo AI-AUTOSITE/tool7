@@ -1,4 +1,3 @@
-// sitemap.xml生成（src/app/sitemap.ts）
 export default function sitemap() {
   return [
     {
@@ -8,15 +7,4 @@ export default function sitemap() {
       priority: 1,
     },
   ]
-}
-
-// robots.txt（src/app/robots.ts）
-export default function robots() {
-  return {
-    rules: {
-      userAgent: '*',
-      allow: '/',
-    },
-    sitemap: 'https://tool7.ai-autosite.com/sitemap.xml',
-  }
 }
